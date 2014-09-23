@@ -51,15 +51,21 @@ hr {
 	text-align: center;
 }
 
-
 /* make education info and work experience info center while still maintain description list layout */
-#education-info, #work-experience-info {
+#education-info {
 	display: block;
+	width: 100%;
+	max-width: 451px;
     margin-left: auto;
     margin-right: auto;
-    width: -webkit-max-content;
-  	width: -moz-max-content;
-  	width: max-content;
+}
+
+#work-experience-info {
+	display: block;
+	width: 100%;
+	max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* profile frame with corner ribbon */
@@ -108,6 +114,10 @@ hr {
   -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
   -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
   box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+#ribbon-text {
+	margin: 0px;
 }
 
 .ribbon-green:before, .ribbon-green:after {
