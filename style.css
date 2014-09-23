@@ -7,31 +7,34 @@ body:before {
 	width: 100%;
 	height: 10px;
 
-	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
-	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
-	box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 10px rgba(0,0,0,1);
+	box-shadow: 0px 0px 10px rgba(0,0,0,1);
 
 	z-index: 100;
 }
+/* shadow along the top edge of the website end */
 
 body {
-	text-align: center;
 	font: 13px/18px "Lucida Grande", Arial, Verdana, sans-serif; 
 	background-color: #fff; 
 	color: #333;
 }
 
-/* make profile corner round */
-img {
-	border:1px solid #;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;  
+h1#name, #hcard-Litie-Zhu {
+	text-align: center;
+}
+
+/* links have no underline */
+a {
+	text-decoration:none;
 }
 
 /* gives headings more top space */
 .heading {
+	text-align: center;
 	margin-top: 30px;
+	font-size: 1.05em;
 }
 
 /* modifying horizontal break to look nicer */
@@ -44,12 +47,82 @@ hr {
     background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
 }
 
-/* links have no underline */
-a {
-	text-decoration:none;
+.info:not(#work-experience-info):not(#education-info) {
+	text-align: center;
 }
 
-/* lists have no bullets */
-ul {
-	list-style-type: none;
+
+/* make education info and work experience info center while still maintain description list layout */
+#education-info, #work-experience-info {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: -webkit-max-content;
+  	width: -moz-max-content;
+  	width: max-content;
 }
+
+/* profile frame with corner ribbon */
+.wrapper {
+  margin: 20px auto;
+  width: 288px;
+  height: 292px;
+  background-image: url("profile.jpg");
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,1);
+  -moz-box-shadow:    0px 0px 8px rgba(0,0,0,1);
+  box-shadow:         0px 0px 8px rgba(0,0,0,1);
+  position: relative;
+  z-index: 90;
+}
+
+.ribbon-wrapper-green {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.ribbon-green {
+  font: bold 15px Sans-Serif;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  position: relative;
+  padding: 7px 0;
+  left: -5px;
+  top: 15px;
+  width: 120px;
+  background-color: #BFDC7A;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45)); 
+  background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:    -moz-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:     -ms-linear-gradient(top, #BFDC7A, #8EBF45); 
+  background-image:      -o-linear-gradient(top, #BFDC7A, #8EBF45); 
+  color: #6a6340;
+  -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.3);
+  -moz-box-shadow:    0px 0px 3px rgba(0,0,0,0.3);
+  box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
+}
+
+.ribbon-green:before, .ribbon-green:after {
+  content: "";
+  border-top:   3px solid #6e8900;   
+  border-left:  3px solid transparent;
+  border-right: 3px solid transparent;
+  position:absolute;
+  bottom: -3px;
+}
+
+.ribbon-green:before {
+  left: 0;
+}
+.ribbon-green:after {
+  right: 0;
+}​
+/* profile frame with corner ribbon end */
