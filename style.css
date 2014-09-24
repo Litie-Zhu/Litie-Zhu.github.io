@@ -129,10 +129,11 @@ hr {
   bottom: -3px;
 }
 
-.ribbon-green:before {
+.ribbon-green::before {
   left: 0;
 }
-.ribbon-green:after {
+.ribbon-green::after {
   right: 0;
 }​
+
 /* profile frame with corner ribbon end */
