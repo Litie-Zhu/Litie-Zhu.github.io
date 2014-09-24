@@ -132,8 +132,8 @@ hr {
 .ribbon-green::before {
   left: 0;
 }
+
 .ribbon-green::after {
   right: 0;
-}​
-
-/* profile frame with corner ribbon end */
+}
+/* profile frame with corner frame end */
