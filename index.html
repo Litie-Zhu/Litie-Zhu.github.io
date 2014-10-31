@@ -5,9 +5,26 @@
 	<title>Litie Zhu's Resume</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+  	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="progressBar.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  	<script type="text/javascript" src="progressBar.js"></script>
+
 </head>
 
 <body>
+	<!-- progress bar -->
+	<form id="progressbarForm">
+		<fieldset>		
+			<legend>Progress</legend>
+			<div id="progressbar"></div>
+			<p>One more year til graduation!</p>
+		</fieldset>
+	</form>
+
 	<!-- corner ribbon styled profile photo-->
 	<div class="wrapper">
 		<div class="ribbon-wrapper-green">
@@ -81,6 +98,10 @@
 			<dd>Python(2yrs), C/C++(1yr), Java(1yr), SQL(&lt;1yr), Git(&lt;1yr>, Android(&lt;1yr), Objective-C(&lt;1yr), Web Dev(&lt;1yr)</dd>
 	</dl>
 
+	<script>
+		$(document).ready(function() {
+			displayProgress();
+		});
+	</script>
 </body>
-
 </html>
