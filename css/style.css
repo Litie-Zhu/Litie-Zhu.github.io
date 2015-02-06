@@ -1,0 +1,144 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  font-size: 1.3em;
+  height: 100%;
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.background_clear {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /*background: url("http://fineart.laforetvisuals.com/media/original/Laforet%20Statue%20of%20Liberty%20Back%2004.jpg") center no-repeat; */
+  background: url("../images/statue_of_liberty.jpg") center no-repeat; 
+  /*Image Credit: http://www.laforetvisuals.com/  */
+  background-size: cover;
+}
+
+.background_blur {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("../images/blur_statue_of_liberty.jpg") center no-repeat;  
+  /*Image Credit: http://www.laforetvisuals.com/  */
+  background-size: cover;
+}
+
+header {
+  height: 58%;
+  position: relative;
+  overflow: hidden;
+}
+
+header hgroup {
+  display: inline-block;
+  position: absolute;
+  transform: translate(-50%, -100%);
+  top: 100%;
+  left: 50%;
+  border: 5px solid #fff;
+  text-align: center;
+  color: #fff;
+  padding: .5em 3em;
+  background-color: rgba(0,0,0,.5);
+}
+
+header hgroup h1, h2 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.display_none {
+  opacity: 0;
+}
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  height: 40px;
+  z-index: 9999;
+}
+
+nav ul {
+  display: inline-block;
+}
+
+nav #tabs {
+  float: right;
+  padding-left: 0px;
+  padding-right: 20px;
+  border-left: 1px rgba(255,255,255,0.35) solid;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+
+nav #tabs li {
+  display: block;
+}
+
+nav #name li a, nav #tabs li a {
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  transition: color 0.3s linear;
+  line-height: 40px;
+}
+
+nav #name li a {
+  color: rgba(255,255,255,0.8);
+  font-size: 16px;
+
+  border: 1px solid #fff;
+  text-align: center;
+  padding: .2em .6em;
+  /*background-color: rgba(0,0,0,.5);*/
+}
+
+nav #tabs li a {
+  display: block;
+  color: rgba(255,255,255,0.6);
+  font-size: 12px;
+  line-height: 40px;
+  padding-left: 20px;
+}
+
+nav #tabs li .active {
+  box-shadow: -1px 0px 0px white;
+}
+
+nav #tabs li .active {
+  color: white;
+}
+
+nav #name li a:hover, nav #tabs li a:hover {
+  color: white;
+}
+
+/*
