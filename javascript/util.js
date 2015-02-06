@@ -19,7 +19,7 @@ $(document).ready(function() {
 	$win.scroll(function() {
 		var $screenTop = $win.scrollTop();
 
-		var $oVal = $screenTop / 240;
+		var $oVal = $screenTop / 180;
 		$blur.css('opacity',$oVal);
 
 
