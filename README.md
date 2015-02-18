@@ -1,3 +1,3 @@
-zhul6.github.io
+Litie-Zhu.github.io
 ===============
-View my resume @ http://zhul6.github.io/
+View my resume @ http://Litie-Zhu.github.io/
