@@ -30,7 +30,7 @@ body {
   height: 100%;
   background: url("../images/statue_of_liberty.jpg") center no-repeat;
   /*Image Credit: http://www.laforetvisuals.com/  */
-  background-color: grey;
+  /* background-color: grey; */
   background-color: rgba(0,0,0,.5);
   background-size: cover;
 }
