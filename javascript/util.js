@@ -1,10 +1,4 @@
 $(document).ready(function() {
-	$('nav #tabs li a').click(function() {
-		if(!$(this).hasClass('active')) {
-			$('nav #tabs li a').removeClass('active');
-			$(this).addClass('active');
-		}
-	});
 
 	var $win = $(window);
 	var $blur = $('.background_blur');
@@ -12,7 +6,7 @@ $(document).ready(function() {
 	var $name = $('nav #name');
 	var $about = $('#about');
 	var $aboutTab = $('#aboutTab');
-	var $resume = $('#about');
+	var $resume = $('#resume');
 	var $resumeTab = $('#resumeTab');
 	var $projects = $('#projects');
 	var $projectsTab = $('#projectsTab');
@@ -22,33 +16,15 @@ $(document).ready(function() {
 		var $oVal = $screenTop / 180;
 		$blur.css('opacity',$oVal);
 
-
 		if($screenTop >= ($header.offset().top + $header.height())) {
 			$name.fadeIn();
 		} else {
 			$name.fadeOut();
 		}
 
-		if($screenTop >= $about.offset().top || $screenTop < $about.offset().top) {
-			$aboutTab.addClass('active')
-			$resumeTab.removeClass('active')
-			$projectsTab.removeClass('active')
-		} else {
-			$aboutTab.removeClass('active')
-		}
-		if($screenTop >= $resume.offset().top) {
-			$resumeTab.addClass('active')
-			$aboutTab.removeClass('active')
-			$projectsTab.removeClass('active')
-		} else {
-			$resumeTab.removeClass('active')
-		}
-		if($screenTop >= $projects.offset().top) {
-			$projectsTab.addClass('active')
-			$aboutTab.removeClass('active')
-			$resumeTab.removeClass('active')
-		} else {
-			$projectsTab.removeClass('active')
-		}
+		// +1 to $screenTop because when tab is clicked, $screenTop is slightly less than offset().top
+		$aboutTab.toggleClass('active', $screenTop < ($about.offset().top + $about.outerHeight(true)));
+		$resumeTab.toggleClass('active', $screenTop+1 >= $resume.offset().top && $screenTop < ($resume.offset().top + $resume.outerHeight(true)));
+		$projectsTab.toggleClass('active', $screenTop+1 >= $projects.offset().top && $screenTop < ($projects.offset().top + $projects.outerHeight(true)));
 	});
 });
