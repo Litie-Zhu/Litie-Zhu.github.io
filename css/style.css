@@ -30,7 +30,6 @@ body {
   height: 100%;
   background: url("../images/statue_of_liberty.jpg") center no-repeat; 
   /*Image Credit: http://www.laforetvisuals.com/  */
-  /* background-color: grey; */
   background-color: rgba(0,0,0,.5);
   background-size: cover;
 }
@@ -48,6 +47,7 @@ header {
   height: 58%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 header hgroup {
@@ -58,7 +58,7 @@ header hgroup {
   left: 50%;
   border: 5px solid #fff;
   text-align: center;
-  color: #fff;
+  color: white;
   padding: .5em 3em;
   background-color: rgba(0,0,0,.5);
 }
@@ -89,6 +89,7 @@ nav ul {
 
 nav #tabs {
   float: right;
+  margin-top: 10px;
   padding-left: 0px;
   padding-right: 20px;
   border-left: 1px rgba(255,255,255,0.35) solid;
@@ -119,7 +120,6 @@ nav #name li a {
   border: 1px solid #fff;
   text-align: center;
   padding: .2em .6em;
-  /*background-color: rgba(0,0,0,.5);*/
 }
 
 nav #tabs li a {
@@ -134,12 +134,11 @@ nav #tabs li .active {
   box-shadow: -1px 0px 0px white;
 }
 
-nav #tabs li .active {
+nav #name li a:hover, nav #tabs li a:hover, nav #tabs li .active {
   color: white;
 }
 
-nav #name li a:hover, nav #tabs li a:hover {
+.plaintext {
   color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
-
-/*

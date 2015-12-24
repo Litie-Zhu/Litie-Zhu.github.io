@@ -4,12 +4,12 @@ $(document).ready(function() {
 	var $blur = $('.background_blur');
 	var $header = $('header');
 	var $name = $('nav #name');
-	var $about = $('#about');
-	var $aboutTab = $('#aboutTab');
-	var $resume = $('#resume');
-	var $resumeTab = $('#resumeTab');
-	var $projects = $('#projects');
-	var $projectsTab = $('#projectsTab');
+	// var $about = $('#about');
+	// var $aboutTab = $('#aboutTab');
+	// var $resume = $('#resume');
+	// var $resumeTab = $('#resumeTab');
+	// var $projects = $('#projects');
+	// var $projectsTab = $('#projectsTab');
 	$win.scroll(function() {
 		var $screenTop = $win.scrollTop();
 
@@ -23,8 +23,8 @@ $(document).ready(function() {
 		}
 
 		// +1 to $screenTop because when tab is clicked, $screenTop is slightly less than offset().top
-		$aboutTab.toggleClass('active', $screenTop < ($about.offset().top + $about.outerHeight(true)));
-		$resumeTab.toggleClass('active', $screenTop+1 >= $resume.offset().top && $screenTop < ($resume.offset().top + $resume.outerHeight(true)));
-		$projectsTab.toggleClass('active', $screenTop+1 >= $projects.offset().top && $screenTop < ($projects.offset().top + $projects.outerHeight(true)));
+		// $aboutTab.toggleClass('active', $screenTop < ($about.offset().top + $about.outerHeight(true)));
+		// $resumeTab.toggleClass('active', $screenTop+1 >= $resume.offset().top && $screenTop < ($resume.offset().top + $resume.outerHeight(true)));
+		// $projectsTab.toggleClass('active', $screenTop+1 >= $projects.offset().top && $screenTop < ($projects.offset().top + $projects.outerHeight(true)));
 	});
 });
