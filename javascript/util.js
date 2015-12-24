@@ -13,7 +13,7 @@ $(document).ready(function() {
 	$win.scroll(function() {
 		var $screenTop = $win.scrollTop();
 
-		var $oVal = $screenTop / 180;
+		var $oVal = $screenTop / 100;
 		$blur.css('opacity',$oVal);
 
 		if($screenTop >= ($header.offset().top + $header.height())) {
